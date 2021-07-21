@@ -1,2 +1,25 @@
-/resume_generator/node_modules
-/book_liibrary_front/bk_lib/node_modules
+/book_library_back/node_modules
+/book_library_back/.env
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/book_library_front/bk_lib/node_modules
+/book_library_front/bk_lib/.pnp
+/book_library_front/bk_lib/.pnp.js
+
+# testing
+/book_library_front/bk_lib/coverage
+
+# production
+/book_library_front/bk_lib/build
+
+# misc
+/book_library_front/bk_lib/.DS_Store
+/book_library_front/bk_lib/.env.local
+/book_library_front/bk_lib/.env.development.local
+/book_library_front/bk_lib/.env.test.local
+/book_library_front/bk_lib/.env.production.local
+
+/book_library_front/bk_lib/npm-debug.log*
+/book_library_front/bk_lib/yarn-debug.log*
+/book_library_front/bk_lib/yarn-error.log*

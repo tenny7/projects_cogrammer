@@ -1,0 +1,20 @@
+POST http://localhost:5000/login
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+    "username": "goshen",
+    "password": "12345678"
+}
+
+
+###
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwZjYxZTVlNGU4YTA5M2MyMDY2MGM3NCIsInVzZXJuYW1lIjoiZ29zaGVuIiwicGFzc3dvcmQiOiIxMjM0NTY3OCJ9LCJpYXQiOjE2MjY3NDIzNjYsImV4cCI6MTYyNjgyODc2Nn0.onO9yLe-f_XkLalfA1-JKRWDTRdeMfILJHnOyf7P0P8
+POST http://localhost:5000/book/create
+Content-Type: application/json
+Authorization: Bearer {{ token }}
+
+{
+    "title": "Ebb",
+    "pages": 123
+}

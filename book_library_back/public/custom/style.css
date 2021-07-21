@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#hero {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    margin-top: 173px;
+    margin-left: 43vh;   
+    color: #fff;
+}
+
+.hero-sub-text {
+    position: absolute;
+    margin-top: 227px;
+    margin-left: 44vh;   
+    color: #fff;
+}
+.hero-button {
+    position: absolute;
+    margin-top: 291px;
+    margin-left: 42vh;   
+    color: #fff;
+}
+
+.image-css {
+    width: initial;
+    height: 200px;
+    object-fit: contain;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
