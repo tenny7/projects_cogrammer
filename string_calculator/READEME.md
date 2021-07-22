@@ -16,3 +16,5 @@ The String calculator calculates
 
 It also considers fractional inpubts and negative numbers.
 
+The file _function.py_ contains code logic for calculating various function.  This file is imported in the _main.py_ and called when the codition is met.  This encourages a modular design pattern and allows for sclaing and code maintenance.
+
