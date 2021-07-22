@@ -19,6 +19,12 @@ This projects simply list the following
 * Login
 * Logout
 
+##### Backend Technology 
+
+* The backend is built  with  Node.js Express framework. 
+* The application  uses  JWT. 
+* The application  uses  a non-relational database  engine,MongoDb. 
+
 
 
 
