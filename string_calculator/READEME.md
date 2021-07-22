@@ -1,6 +1,7 @@
 # String Calculator
 
-Driver code is contained in **line 55** of the _main.py_ file
+Driver code is contained in **line 53** of the _main.py_ file
+> obj.calculate("+ 12.5 3")
 
 The String calculator calculates
 
