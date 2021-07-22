@@ -1,5 +1,6 @@
 import React from 'react' 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import $ from 'jquery';
 import { Route, BrowserRouter as Router } from "react-router-dom";
 import Home from './modules/Home';
 import Header from './modules/partials/Header'

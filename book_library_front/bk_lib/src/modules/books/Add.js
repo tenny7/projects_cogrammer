@@ -24,7 +24,7 @@ export default class Add extends React.Component {
      handleSubmit = (event) => {
         event.preventDefault()
 
-        const url = 'http://localhost:5000/book/create'
+        const url = 'http://cgram.southafricanorth.cloudapp.azure.com:5000/book/create'
         const headers = {
             'Content-type': 'application/json',
             Authorization: `Bearer ${localStorage.getItem("token")}`

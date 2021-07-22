@@ -30,7 +30,7 @@ export default class View extends React.Component {
             this.setState({
                 books: res.data
             })
-        })
+        }).catch((error) => {console.log(error)})
     } 
 
     componentDidMount(){

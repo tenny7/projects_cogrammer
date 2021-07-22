@@ -9,8 +9,12 @@ const app = express()
 const jwt = require('jsonwebtoken')
 const logger = require('morgan')
 const port = process.env.PORT || 5000
+const expressValidator = require('express-validator')
 
 
+
+
+app.use(expressValidator())
 app.use(cors())
 app.use('/public',express.static('public'))
 app.use(logger('dev'));
