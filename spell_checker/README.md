@@ -1,4 +1,4 @@
-# Spell Checker
+# Spell Checker Option 4: Ruby
 In **line 3** of the spell_checker file, I replaced the list of incorrect words _@words_ with the correct words. i.e cat, dog, rabbit, hamster, budgie and parrot
 
 I replaced _line 5 to 9_ of this file with _line 12 to 18_
