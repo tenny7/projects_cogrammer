@@ -10,7 +10,7 @@ import Register from './modules/auth/Register'
 import Edit from './modules/books/Edit'
 import Dashboard from './modules/Dashboard';
 import axios from 'axios'
-import store from './store'
+
 
 
 
@@ -22,7 +22,7 @@ export default class App extends React.Component {
 
  
   componentDidMount = () => {
-      axios.get('http://localhost:5000/user').then(
+      axios.get('http://cgram.southafricanorth.cloudapp.azure.com:5000/user').then(
           res => {
               this.setUser(res.data)
           }, 

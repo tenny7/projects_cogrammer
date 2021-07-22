@@ -20,7 +20,7 @@ export default class Register extends React.Component {
    handleSubmit = (event) => {
        event.preventDefault()
 
-       const url = `http://localhost:5000/register`
+       const url = `http://cgram.southafricanorth.cloudapp.azure.com:5000/register`
        
        const headers = {
            'Content-Type': 'application/json',

@@ -18,7 +18,7 @@ export default class View extends React.Component {
     }
     
     getBooks = (event) => {
-        const url = 'http://localhost:5000/books'
+        const url = 'http://cgram.southafricanorth.cloudapp.azure.com:5000/books'
 
         const headers = {
             'Content-type': 'application/json',

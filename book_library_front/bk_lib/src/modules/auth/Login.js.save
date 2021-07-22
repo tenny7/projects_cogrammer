@@ -37,10 +37,7 @@ export default class Login extends React.Component {
                 username: this.state.username,
                 password: this.state.password    
         }
-	
-
-	
-	        
+        
         axios.post(url,data,{headers})
 
         .then((res) => {
@@ -49,7 +46,7 @@ export default class Login extends React.Component {
                 loggedIn: true
             })
             this.props.setUser(res.data.user)
-        }).catch(error => console.log(error))   
+axios inter        }).catch(error => console.log(error))   
     }
 
     render() {
