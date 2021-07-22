@@ -7,10 +7,10 @@ The String calculator calculates
 * Value
 * Factorial
 * Highest Prime number
-* +
-* -
-* *
-* /
+* Addition +
+* Subtraction -
+* Multiplication *
+* Division /
 
 
 It also considers fractional inpubts and negative numbers.
