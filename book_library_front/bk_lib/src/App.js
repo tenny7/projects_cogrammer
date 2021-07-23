@@ -25,14 +25,13 @@ export default class App extends React.Component {
 
  
   componentDidMount = () => {
-      axios.get('http://cgram.southafricanorth.cloudapp.azure.com:5000/user').then(
-          res => {
-              this.setUser(res.data)
-          }, 
-          err => {
-              console.log(err)
-          }
-      )
+      axios.get('http://cgram.southafricanorth.cloudapp.azure.com:5000/user')
+      .then( (res) => {
+        this.setUser(res.data)
+      })
+      .catch((error) => {
+        console.log(err)
+      })
   }
 
   setUser = (user) => {
