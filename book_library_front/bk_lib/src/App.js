@@ -10,7 +10,7 @@ import Register from './modules/auth/Register'
 import Edit from './modules/books/Edit'
 import Dashboard from './modules/Dashboard';
 import axios from 'axios'
-import store from './store'
+
 
 
 

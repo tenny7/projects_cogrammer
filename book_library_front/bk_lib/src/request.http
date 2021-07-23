@@ -1,4 +1,5 @@
-POST http://localhost:5000/login
+
+POST http://cgram.southafricanorth.cloudapp.azure.com:5000/login
 Content-Type: application/json
 Authorization: Bearer 
 

@@ -1,6 +1,6 @@
 class Spelling_Checker
     def initialize()
-        @words = ['catt', 'ct', 'caaat','tcat']
+        @words = ['cat', 'dog', 'rabbit', 'hamster', 'budgie', 'parrot']
     end
 
     def spellChecker(string)
@@ -8,14 +8,16 @@ class Spelling_Checker
        
         array.map { |n| 
             if @words.include? n
-                "*#{n}*"
-            else 
                 n
+            else 
+                "*#{n}*"
             end
         }.join(" ")
     end
+
+    
 end
     
 checker = Spelling_Checker.new
-output = checker.spellChecker("cat ct")
+output = checker.spellChecker("dog doog")
 p output
