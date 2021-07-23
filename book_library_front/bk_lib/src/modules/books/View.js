@@ -45,7 +45,7 @@ export default class View extends React.Component {
                 {/* <div className="row"> */}
                 <div className=" row d-flex justify-content-between mt-3"  style={{ marginRight: 2}}>
                     {this.state.books.map( (book, index) => {
-                        return <div class="col-md-3  mr-3 mb-3 custom-book-card" key={index}>
+                        return <div className="col-md-3  mr-3 mb-3 custom-book-card" key={index}>
                                     <div className="card-body">
                                         <h6 className="card-title custom-font-header lh-1"><b>Book Name:</b> {book.title}</h6>
                                         <h6 className="card-title custom-font-header lh-1"><b>Author:</b> {book.author}</h6>
