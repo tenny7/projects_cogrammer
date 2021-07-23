@@ -30,7 +30,7 @@ export default class App extends React.Component {
         this.setUser(res.data)
       })
       .catch((error) => {
-        console.log(err)
+        console.log(error)
       })
   }
 
