@@ -1,5 +1,7 @@
 import React from 'react' 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+ // eslint-disable-next-line
 import $ from 'jquery';
 import { Route, BrowserRouter as Router } from "react-router-dom";
 import Home from './modules/Home';
