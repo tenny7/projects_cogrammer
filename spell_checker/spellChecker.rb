@@ -19,5 +19,5 @@ class Spelling_Checker
 end
     
 checker = Spelling_Checker.new
-output = checker.spellChecker("dog doog")
+output = checker.spellChecker("dog doog dogg")
 p output

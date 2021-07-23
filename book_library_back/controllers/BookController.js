@@ -1,4 +1,6 @@
 const Book =  require('../models/books')
+const { body } = require('express-validator/check')
+const { validationResult } = require('express-validator/check');
 
 
 const bookIndex = async (req,res) => {
@@ -6,10 +8,21 @@ const bookIndex = async (req,res) => {
     res.json(books)
 }
 
+exports.validate = (method) => {
+    switch (method) {
+      case 'bookCreate': {
+       return [ 
+          body('title', 'enter valid string').isString(),
+          body('author').isString(),
+          body('pages').isInt(),
+         ]   
+      }
+    }
+  }
+
 const bookCreate = (req,res) => { 
         let book = new Book({
             title           : req.body.title,
-            publishedDate   : req.body.publishDate,
             author          : req.body.author,
             pages           : req.body.pages
         })
@@ -23,6 +36,16 @@ const bookCreate = (req,res) => {
         });     
 }
 
+
+exports.validate = (method) => {
+    switch (method) {
+      case 'getBookWithId': {
+        return [ 
+            param('id', 'enter valid string').notEmpty()
+           ]  
+      }
+    }
+  }
 const getBookWithId = async (req, res) => {
     book = await Book.findById(req.params.id)
     if (book) {
@@ -36,6 +59,20 @@ const getBookWithId = async (req, res) => {
     }
 }
 
+
+
+exports.validate = (method) => {
+    switch (method) {
+      case 'updateBookWithId': {
+        return [ 
+            param('id', 'enter valid string').notEmpty(),
+            body('title').isString(),
+            body('author').isString(),
+            body('pages').isInt(),
+           ]   
+      }
+    }
+  }
 const updateBookWithId = (req,res) => {
 
     bookUpdate = Book.findByIdAndUpdate(req.params.id, {
@@ -54,6 +91,16 @@ const updateBookWithId = (req,res) => {
     
 }
 
+
+exports.validate = (method) => {
+    switch (method) {
+      case 'deleteBook': {
+       return [ 
+          param('id').notEmpty()
+         ]   
+      }
+    }
+  }
 const deleteBook = (req,res) => {
     book = Book.deleteOne({_id:req.params.id})
     .then(() => {

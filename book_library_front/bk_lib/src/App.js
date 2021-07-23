@@ -1,5 +1,6 @@
 import React from 'react' 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import $ from 'jquery';
 import { Route, BrowserRouter as Router } from "react-router-dom";
 import Home from './modules/Home';
 import Header from './modules/partials/Header'
@@ -22,7 +23,7 @@ export default class App extends React.Component {
 
  
   componentDidMount = () => {
-      axios.get('http://localhost:5000/user').then(
+      axios.get('http://cgram.southafricanorth.cloudapp.azure.com:5000/user').then(
           res => {
               this.setUser(res.data)
           }, 

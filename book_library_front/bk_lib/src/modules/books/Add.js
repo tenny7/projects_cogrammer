@@ -24,7 +24,7 @@ export default class Add extends React.Component {
      handleSubmit = (event) => {
         event.preventDefault()
 
-        const url = 'http://localhost:5000/book/create'
+        const url = 'http://cgram.southafricanorth.cloudapp.azure.com:5000/book/create'
         const headers = {
             'Content-type': 'application/json',
             Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -55,6 +55,7 @@ export default class Add extends React.Component {
                                     name="title"
                                     className="form-control"
                                     value={this.state.title} 
+                                    required
                                     onChange={e => this.handleInput(e)}
                                     placeholder="Enter title of book"/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
                         </div>
@@ -64,6 +65,7 @@ export default class Add extends React.Component {
                                     className="form-control" 
                                     name="author" 
                                     value={this.state.author}
+                                    required
                                     onChange={e => this.handleInput(e)} 
                                     placeholder="Author" />
                         </div>
@@ -73,6 +75,7 @@ export default class Add extends React.Component {
                                     className="form-control" 
                                     name="pages" 
                                     value={this.state.pages}
+                                    required
                                     onChange={e => this.handleInput(e)} 
                                     placeholder="Number of pages" />
                         </div>

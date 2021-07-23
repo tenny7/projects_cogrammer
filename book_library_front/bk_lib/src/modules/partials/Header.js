@@ -26,29 +26,29 @@ export default class Header extends React.Component {
                             <Link className="nav-link custom-font-css active" to="/">Home</Link>
                         </li>
 
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <Link className="nav-link custom-font-css" to="/books">Books</Link>
                         </li>
                         
                         { !this.props.user ? 
                         <>
                             
-                            <li class="nav-item">
+                            <li className="nav-item">
                             <Link className="nav-link custom-font-css" to="/loginForm">Login</Link>
                             </li>
-                            <li class="nav-item ">
+                            <li className="nav-item ">
                                 <Link className="nav-link custom-font-css" to="/registerForm">Register</Link>
                             </li>
                         </>
                         : 
                         <>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <Link className="nav-link custom-font-css" to="/dashboard">Dashboard</Link>
                             </li>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <Link className="nav-link custom-font-css" to="/add">Add Book</Link>
                             </li>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <Link className="nav-link custom-font-css" onClick={this.handleLogout} to="/">Logout</Link>
                             </li>
                         </>

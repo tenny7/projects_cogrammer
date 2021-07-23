@@ -5,7 +5,8 @@ class StringCalculator:
     # global variables
 
     fact = ""
-    prime = False
+    # prime = False
+    
     def __init__(self,name):
         self.name = name
         
@@ -18,8 +19,8 @@ class StringCalculator:
             value       = data[1]
             n = int(value)
 
-            if ( operator == 'prime'):
-                f.prime(n) # call method to calculate prime
+            if ( operator == 'prime'):  
+                f.maxPrimeFactors(n) # call method to calculate prime
             elif (operator == "factorial"):
                 f.factorial(n) # call method to calculate factorial
             else:
@@ -50,4 +51,4 @@ class StringCalculator:
 
 if __name__ == '__main__':
     obj = StringCalculator("String Caculator")
-    obj.calculate("+ 12.5 3")
+    obj.calculate("prime 15")

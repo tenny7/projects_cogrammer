@@ -2,6 +2,20 @@
 const User = require('../models/user')
 const createError = require('http-errors')
 const jwt = require('jsonwebtoken') 
+const { body } = require('express-validator/check')
+const { validationResult } = require('express-validator/check');
+
+
+exports.validate = (method) => {
+  switch (method) {
+    case 'Register': {
+     return [ 
+        body('username', 'userName doesn\'t exists').exists(),
+        body('password').isLength({ min: 5 })
+       ]   
+    }
+  }
+}
 
 
 exports.CurrentUser = (req, res) => {
@@ -9,8 +23,17 @@ exports.CurrentUser = (req, res) => {
     res.json(user)
 }
 
+
+
 exports.Register = async (req, res) => {
     try {
+
+      const errors = validationResult(req); // Finds the validation errors in this request and wraps them in an object with handy functions
+
+      if (!errors.isEmpty()) {
+        res.status(422).json({ errors: errors.array() });
+        return;
+      }
         const {username, password} = req.body 
         if (!username  || !password) throw createError.BadRequest()
         const doesExist = await User.findOne({username: username});

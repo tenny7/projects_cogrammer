@@ -17,7 +17,7 @@ export default class Edit extends React.Component {
     
     getBooks = (event) => {
         const bookId = this.props.match.params.id;
-        const url = `http://localhost:5000/book/${bookId}`
+        const url = `http://cgram.southafricanorth.cloudapp.azure.com:5000/book/${bookId}`
 
         const headers = {
             'Content-type': 'application/json',
@@ -29,7 +29,7 @@ export default class Edit extends React.Component {
             this.setState({
                 id      : res.data.data._id,
                 title   : res.data.data.title,
-                author   : res.data.data.author,
+                author  : res.data.data.author,
                 pages   : res.data.data.pages
             })
         }).catch((error) => {
@@ -51,7 +51,7 @@ export default class Edit extends React.Component {
         const bookId = this.props.match.params.id;
         event.preventDefault()
 
-        const url = `http://localhost:5000/book/${bookId}`
+        const url = `http://cgram.southafricanorth.cloudapp.azure.com:5000/book/${bookId}`
       
         const headers = {
             'Content-type': 'application/json',
@@ -81,7 +81,7 @@ export default class Edit extends React.Component {
         }
 
         const bookId = this.state.id
-        const url = `http://localhost:5000/book/delete/${bookId}`
+        const url = `http://cgram.southafricanorth.cloudapp.azure.com:5000/book/delete/${bookId}`
 
         axios.delete(url, {headers:headers})
         .then((res) => {
@@ -106,6 +106,7 @@ export default class Edit extends React.Component {
                                     name="title"
                                     className="form-control"
                                     value={this.state.title} 
+                                    required
                                     onChange={e => this.handleInput(e)}
                                     placeholder="Enter title of book"/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
                         </div>
@@ -115,6 +116,7 @@ export default class Edit extends React.Component {
                                     className="form-control" 
                                     name="author" 
                                     value={this.state.author}
+                                    required
                                     onChange={e => this.handleInput(e)} 
                                     placeholder="Author" />
                         </div>
@@ -124,6 +126,7 @@ export default class Edit extends React.Component {
                                     className="form-control" 
                                     name="pages" 
                                     value={this.state.pages}
+                                    required
                                     onChange={e => this.handleInput(e)} 
                                     placeholder="Number of pages" />
                         </div>

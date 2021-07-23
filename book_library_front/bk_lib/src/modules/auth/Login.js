@@ -26,7 +26,7 @@ export default class Login extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
-        const url = `http://localhost:5000/login`
+        const url = `http://cgram.southafricanorth.cloudapp.azure.com:5000/login`
         
         const headers = {
             'Content-Type': 'application/json',
@@ -37,7 +37,10 @@ export default class Login extends React.Component {
                 username: this.state.username,
                 password: this.state.password    
         }
-        
+	
+
+	
+	        
         axios.post(url,data,{headers})
 
         .then((res) => {
