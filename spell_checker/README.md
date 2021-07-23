@@ -22,3 +22,11 @@ I replaced _line 9 to 13_ of _spell_checker.rb_ file with _line 16 to 22_
         }.join(" ")
     
 The implementation uses a `array.map` as against `for loop`
+
+## Test 
+checker.spellChecker("dog doog dogg") located in **line  22** of _spell_checker.rb_ 
+`Input:` 
+* dog doog 
+* doogg dog ddog
+* hammster haammster
+* cat cct 
