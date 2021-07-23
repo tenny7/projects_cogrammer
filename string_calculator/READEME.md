@@ -12,6 +12,8 @@ The String calculator calculates
 * Subtraction -
 * Multiplication *
 * Division /
+* Long arithmetic expressions
+
 
 ## Inputs -> Outputs format  
 * Value, e.g. "3.2" -> "3.2"
